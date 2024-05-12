@@ -7,13 +7,13 @@ salary = int(input())
 fines = 0
 
 for _ in range(open_tabs):
-    site_name = input().lower().strip()
+    site_name = input()
 
-    if site_name == 'facebook':
+    if site_name == 'Facebook':
         fines += facebook
-    elif site_name == 'instagram':
+    elif site_name == 'Instagram':
         fines += instagram
-    elif site_name == 'instagram':
+    elif site_name == 'Reddit':
         fines += instagram
 
 if fines >= salary:
