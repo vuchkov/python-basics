@@ -9,30 +9,24 @@ everest_min = 41
 
 groups = int(input())
 total = 0
-group = []
+group = [0, 0, 0, 0, 0]
+
 for i in range(groups):
     group_members = int(input())
     total += group_members
 
-    if group_members < musala_max:
-        group[1] += group_members
+    if group_members <= musala_max:
+        group[0] += group_members
     elif monblan_min <= group_members <= monblan_max:
-        group[2] += group_members
+        group[1] += group_members
     elif kili_min <= group_members <= kili_max:
-        group[3] += group_members
+        group[2] += group_members
     elif k2_min <= group_members <= k2_max:
-        group[4] += group_members
+        group[3] += group_members
     elif everest_min <= group_members:
-        group[5] += group_members
+        group[4] += group_members
 
 for i in range(len(group)):
     percent = group[i] / total * 100
-    match i:
-        case 1:
-            name = "Мусала"
-        case 2:
-            name = "Монблан"
-        case 3:
-            name = "Мусала"
-    print("Изкачващи {name}: {percent}")
+    print(f"{percent:.2f}%")
 
