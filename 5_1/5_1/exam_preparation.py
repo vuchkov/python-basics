@@ -17,7 +17,7 @@ while True:
     grade_sum += current_grade
     if current_grade <= BAD_GRADE_THRESHOLD:
         bad_grades_count += 1
-    if bad_grades_count > bad_grades_limit:
+    if bad_grades_count >= bad_grades_limit:
         break
 
 if bad_grades_count >= bad_grades_limit:
