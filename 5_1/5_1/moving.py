@@ -2,16 +2,13 @@ x = int(input())
 y = int(input())
 z = int(input())
 
-m3 = x * y * z
-current = m3
+current = x * y * z
 
-while True:
+while current > 0:
     command = input()
     if command == "Done":
         break
     current -= int(command)
-    if current <= 0:
-        break
 
 if current > 0:
     print(f"{current} Cubic meters left.")
